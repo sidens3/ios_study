@@ -25,8 +25,16 @@ class PhotosCollectionViewController: UICollectionViewController {
 //        layout.minimumLineSpacing = 1
 //        layout.minimumInteritemSpacing = 1
 //        layout.scrollDirection = .vertical
-        
-        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickPhotoSegue" {
+            let cell = sender as! PhotoCell
+            let photoVC = segue.destination as! PhotoViewController
+            
+            photoVC.image = cell.dogImageView.image
+
+        }
     }
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
