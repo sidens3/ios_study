@@ -11,13 +11,13 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UISegmentedControl" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIElements" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SYz-4G-aBz">
-                                <rect key="frame" x="141.5" y="87" width="131" height="31"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SYz-4G-aBz">
+                                <rect key="frame" x="124" y="87" width="187" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="dim-T8-Lr7"/>
                                 </constraints>
@@ -38,20 +38,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Rhf-ss-yt8">
+                                <rect key="frame" x="122" y="296" width="191" height="31"/>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="M1u-Ub-3BV"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d6y-Dm-C7Z" secondAttribute="trailing" constant="19" id="0ub-uP-p7j"/>
-                            <constraint firstItem="SYz-4G-aBz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dns-oR-OHe"/>
+                            <constraint firstItem="Rhf-ss-yt8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="68t-h9-WCM"/>
+                            <constraint firstItem="SYz-4G-aBz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="10.5" id="Dns-oR-OHe"/>
                             <constraint firstItem="d6y-Dm-C7Z" firstAttribute="top" secondItem="SYz-4G-aBz" secondAttribute="bottom" constant="93" id="U5t-LY-vac"/>
                             <constraint firstItem="SYz-4G-aBz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="43" id="WaZ-7N-fba"/>
+                            <constraint firstItem="Rhf-ss-yt8" firstAttribute="top" secondItem="d6y-Dm-C7Z" secondAttribute="bottom" constant="65.5" id="XIT-Xm-x0C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rhf-ss-yt8" secondAttribute="trailing" constant="103" id="sCx-Nf-CkX"/>
                             <constraint firstItem="d6y-Dm-C7Z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yxD-Fa-5Ty"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="d6y-Dm-C7Z" id="BwO-Nb-hxh"/>
                         <outlet property="segmentegControl" destination="SYz-4G-aBz" id="bEu-L4-nqK"/>
+                        <outlet property="slider" destination="Rhf-ss-yt8" id="iEH-FY-vQu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
